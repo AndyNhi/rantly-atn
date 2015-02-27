@@ -1,0 +1,36 @@
+.app-header {
+  background-color: #34495e;
+  min-height: 53px;
+  font-size: 16px;
+}
+
+.content {
+padding-left: 15px;
+clear: both;
+overflow: hidden;
+}
+
+.app-header .app-header-brand {
+font-size: 30px;
+padding-left: 10px;
+}
+
+.app-header .app-header-brand a{
+  font-size: 30px;
+  font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
+}
+
+
+.app-header a {
+
+  float: left;
+  display: block;
+  position: relative;
+  color: #fff;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23px;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
