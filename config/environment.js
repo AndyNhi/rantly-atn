@@ -1,6 +1,7 @@
 /* jshint node: true */
 
 module.exports = function(environment) {
+
   var ENV = {
     modulePrefix: 'rantly-atn',
     environment: environment,
@@ -28,6 +29,11 @@ module.exports = function(environment) {
       // when it is created
     }
   };
+
+  ENV['simple-auth'] = {
+    authorizer: 'simple-auth-authorizer:devise'
+  };
+
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
