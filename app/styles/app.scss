@@ -1,13 +1,32 @@
+$susy: (
+gutters: (1/8),
+);
+
 @import 'bower_components/susy/sass/susy';
 @import 'scalefonts';
 @import 'navigationbar';
 @import url(http://fonts.googleapis.com/css?family=Laila:400,700);
 @import url(http://fonts.googleapis.com/css?family=Hind:400,700,300);
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,900);
+@import 'login';
+
+
 
 *,:after,:before{box-sizing:border-box}
 
 a {
   text-decoration: none;
   font: inherit;
+}
+
+
+body {
+  @include span(8 of 8);
+  aside {
+    padding-left: 15px;
+    @include span(2 of 8);
+  }
+  main {
+    @include span(6 of 8 last);
+  }
 }
