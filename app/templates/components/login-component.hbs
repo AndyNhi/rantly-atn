@@ -1,0 +1,18 @@
+{{yield}}
+
+{{#if session.isAuthenticated}}
+  <a {{ action 'invalidateSession' }}>Logout</a>
+{{else}}
+  <form class='login-form'>
+    <div class='form-group'>
+      {{input type="form" value=userLogin}}
+    </div>
+    <div class="form-group">
+      {{input type="password" value=userPassword}}
+    </div>
+    <div class="form-group">
+      <button {{ action 'authenticateSession' }}>Login</button>
+    </div>
+  </form>
+
+{{/if}}

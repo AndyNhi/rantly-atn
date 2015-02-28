@@ -1,0 +1,53 @@
+.login-form {
+  position: relative;
+  padding: 15px;
+  border-radius: 3px;
+  box-shadow: 0px 1px 7px 1px rgba(163,163,163,1);
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 18px;
+  line-height: 1.72222;
+  color: #34495E;
+  border: 2px solid #ECF0F1;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  -webkit-transition: border .25s linear,color .25s linear,background-color .25s linear;
+  transition: border .25s linear,color .25s linear,background-color .25s linear;
+}
+
+input:focus, textarea:focus {
+border: 2px solid #1ABC9C;
+outline: 0;
+}
+
+.form-group > button {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #fff;
+  border: 1px solid;
+  border-radius: 3px;
+  -webkit-transition: .25s;
+  transition: .25s;
+  display: block;
+  width: 100%;
+  background: #1ABC9C;
+  &:hover {
+    background: white;
+    color: #1ABC9C;
+  }
+}
