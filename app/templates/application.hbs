@@ -13,13 +13,20 @@
 
 <body>
   <aside>
+    <div class="rant-search">
+      {{input type=search value=params class="rant-search-field" placeholder="Search"}}
+    </div>
     {{login-component}}
   </aside>
+
+  <header class="app-inner-header">
+    <button class="button button-invert">New Rant</button>
+  </header>
 
   <main>
     {{outlet}}
   </main>
-  
+
   <footer>
   </footer>
 
