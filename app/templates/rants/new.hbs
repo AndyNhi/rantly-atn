@@ -1,1 +1,29 @@
-HELLO
+<article class="rant-item form">
+  <header class="rant-header">
+
+    <div class="rant-header-title">
+      {{input type="text" placeholder="Rant Title" autofocus="true"}}
+    </div>
+
+    <div class="rant-header-actions">
+      <button class="button button-primary">
+        <span {{action 'saveRant'}} class="icon-upload">Save</span>
+      </button>
+      <button class="button button-default">
+        <span {{action 'cancelRant'}} class="icon-exit"> Cancel</span>
+      </button>
+    </div>
+  </header>
+
+  <aside class="rant-secondary">
+    <div>
+      <div class="author-photo"></div>
+    </div>
+    String Counter
+  </aside>
+
+  <section class="rant-item-content">
+    <textarea placeholder="Start your rant." rows="13"></textarea>
+  </section>
+
+</article>
