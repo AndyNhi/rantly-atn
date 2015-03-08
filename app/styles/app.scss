@@ -1,5 +1,5 @@
 $susy: (
-gutters: (1/8),
+gutters: (0),
 );
 
 @import 'bower_components/susy/sass/susy';
@@ -9,6 +9,7 @@ gutters: (1/8),
 @import url(http://fonts.googleapis.com/css?family=Hind:400,700,300);
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,900);
 @import 'login';
+@import 'newrant';
 
 *,:after,:before{box-sizing:border-box}
 
@@ -18,7 +19,7 @@ a {
 }
 
 body {
-  @include span(8 of 8);
+  @include span(10 of 10);
   aside {
     padding-left: 15px;
     @include span(2 of 8);
@@ -33,10 +34,11 @@ body {
   background: #3498DB;
   padding: 7px 15px;
   color: #fff;
+  margin-bottom: 20px;
 }
 
 .app-inner-header {
-  width: 74.6687%;
+  width: 100%;
 }
 
 .app-inner-header .button {
@@ -48,6 +50,10 @@ body {
   background: #fff;
   color: #1ABC9C;
   border-color: #fff;
+  &:hover{
+    color: white;
+    background: #1ABC9C;
+  }
 }
 
 .button {

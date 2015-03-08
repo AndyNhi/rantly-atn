@@ -19,11 +19,12 @@
     {{login-component}}
   </aside>
 
-  <header class="app-inner-header">
-    <button class="button button-invert">New Rant</button>
-  </header>
 
   <main>
+    <header class="app-inner-header">
+      <button {{action 'newRant' this}} class="button button-invert">New Rant</button>
+    </header>
+
     {{outlet}}
   </main>
 
