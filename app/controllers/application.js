@@ -4,7 +4,7 @@ export default Ember.Controller.extend({
 
   actions: {
     newRant: function() {
-      this.transitionToRoute('/new')
+      this.transitionToRoute('/new');
     }
   }
 

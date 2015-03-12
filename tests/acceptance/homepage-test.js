@@ -17,7 +17,7 @@ test('visiting /', function(){
   visit('/');
 
   andThen(function(){
-    equal(currentPath(), 'rants');
+    equal(currentPath(), 'rants.index');
     equal(find('.app-header-brand > a').text().trim(), 'Rantly');
     equal(find('nav > a:nth-child(1)').text().trim(), 'Rants');
     equal(find('nav > a:nth-child(2)').text().trim(), 'Users');

@@ -2,15 +2,15 @@
   <header class="rant-header">
 
     <div class="rant-header-title">
-      {{input type="text" placeholder="Rant Title" autofocus="true"}}
+      {{input type="text" placeholder="Rant Title" autofocus="true" value=rantTitle}}
     </div>
 
     <div class="rant-header-actions">
       <button class="button button-primary">
-        <span {{action 'saveRant'}} class="icon-upload">Save</span>
+        <span {{action 'saveRant'}} class="icon-upload save-rant">Save</span>
       </button>
       <button class="button button-default">
-        <span {{action 'cancelRant'}} class="icon-exit"> Cancel</span>
+        <span {{action 'cancelRant'}} class="icon-exit cancel-rant"> Cancel</span>
       </button>
     </div>
   </header>
@@ -23,7 +23,7 @@
   </aside>
 
   <section class="rant-item-content">
-    <textarea placeholder="Start your rant." rows="13"></textarea>
+    {{input type="text" rows="13" placeholder="Start your rant." autofocus="true" value=rantBody}}
   </section>
 
 </article>

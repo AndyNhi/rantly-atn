@@ -14,10 +14,10 @@ module('Acceptance: Rants', {
 
 test('rants crud', function() {
   visit('/');
-  click('New Rant')
-  fillIn('.rant-header-title > textarea', 'Cool Title')
-  fillIn('.rant-item-content > textarea', 'Cool Body')
-  click('Save')
+  click('button.new-rant');
+  fillIn('.rant-header-title > input', 'Cool Title');
+  fillIn('.rant-item-content > textarea', 'Cool Body');
+  click('span.save-rant');
   andThen(function() {
     equal(find('.rant-header-title > h3').text().trim(), 'Cool Rant');
     equal(find('.rant-item-content').text().trim(), 'Cool Rant');
