@@ -11,6 +11,8 @@ Router.map(function() {
   });
   this.resource("users", function() {
   });
+  this.route("protected");
+  this.route("login");
 });
 
 export default Router;

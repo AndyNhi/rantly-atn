@@ -2,6 +2,7 @@
 
 module.exports = function(environment) {
 
+
   var ENV = {
     modulePrefix: 'rantly-atn',
     environment: environment,
@@ -34,6 +35,10 @@ module.exports = function(environment) {
     authorizer: 'simple-auth-authorizer:devise'
   };
 
+  ENV['simple-auth-devise'] = {
+  crossOriginWhitelist: ['*'],
+  identificationAttributeName: 'email'
+  };
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;

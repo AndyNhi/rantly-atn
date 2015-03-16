@@ -7,7 +7,7 @@ export default Ember.Controller.extend({
 
       var title = this.get('rantTitle');
       var body = this.get('rantBody');
-      
+
       // var user = Ember.Object.create({
       //   user_id: 1
       // })
