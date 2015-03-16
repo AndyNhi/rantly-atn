@@ -16,12 +16,22 @@
     <div class="rant-search">
       {{input type=search value=params class="rant-search-field" placeholder="Search"}}
     </div>
-    {{login-component}}
+
 
     {{#if session.isAuthenticated}}
-      <button {{ action 'invalidateSession' }}>Logout</button>
+      <form class='login-form'>
+        <div class='form-group'>
+          You are logged in.
+          </div>
+          <div class="form-group">
+            User name.
+          </div>
+          <div class="form-group">
+            <button {{ action 'invalidateSession' }}>Logout</button>
+          </div>
+      </form>
     {{else}}
-      {{#link-to 'login'}}Login{{/link-to}}
+      {{login-component}}
     {{/if}}
 
   </aside>

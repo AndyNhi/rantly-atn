@@ -7,12 +7,11 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.resource("rants", {path: '/'}, function() {
-    this.route("new", {path: '/new'});
+    this.route("new");
   });
   this.resource("users", function() {
   });
   this.route("protected");
-  this.route("login");
 });
 
 export default Router;
