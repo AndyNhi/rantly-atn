@@ -1,0 +1,92 @@
+article, header {
+  display: block;
+}
+
+.rant-item {
+  width: 100%;
+  position: relative;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.2);
+  border-radius: 3px;
+  -webkit-transition: .25s;
+  transition: .25s;
+  clear: both;
+  overflow: hidden;
+}
+
+.rant-header {
+  margin-bottom: 15px;
+  clear: both;
+  overflow: hidden;
+}
+
+.rant-header-title {
+  float: left;
+  width: 60%;
+  font-family: Laila,serif;
+  font-weight: 700;
+  font-size: 29px;
+}
+
+
+.rant-header-title a {
+  color: #34495E;
+}
+
+a {
+  color: #16a085;
+  text-decoration: none;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+
+.rant-header-actions {
+  float: right;
+}
+
+.rant-secondary {
+  width: 21%;
+  float: left;
+}
+
+
+.rant-item-content {
+  float: left;
+  width: 79%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.author-photo {
+  display: block;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 15px;
+  color: #34495E;
+  background: url(../img/author-photo-db65e861597528b36484917f92f1e0b3.png) center/cover no-repeat;
+  border: 4px dashed;
+  border-radius: 25px 25px 0;
+}
+
+button.kill-button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: black;
+  font-size: .6em;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+button.button-primary.edit {
+  background: #1ABC9C;
+  color: white;
+  border-color: #fff;
+  &:hover{
+    color: #1ABC9C;
+    background: #fff;
+    border: 1px solid #1ABC9C;
+  }
+}

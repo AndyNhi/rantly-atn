@@ -1,4 +1,30 @@
-HELLO
 {{#each rant in model}}
-  {{rant.title}}
+<section class="rants-index">
+  <article class="rant-item">
+    <header class="rant-header">
+      <div class="rant-header-title">
+        {{rant.title}}
+      </div>
+
+      <div class="rant-header-actions">
+        <button class="button button-primary edit"><span class="icon-new">Edit</span></button>
+      </div>
+
+    </header>
+
+  <aside class="rant-secondary">
+    <div class="ember-view author">
+      <div style="background-image: url(http://www.gravatar.com/avatar/undefined?s=200)" class="author-photo">
+    </div>
+      <h5> </h5>
+      <h6></h6>
+    </div>
+  </aside>
+
+  <section class="rant-item-content">
+    {{rant.body}}
+  </section>
+
+  <button class="kill-button">Kill</button>
+</section>
 {{/each}}
