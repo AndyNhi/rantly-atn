@@ -10,6 +10,7 @@ gutters: (0),
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,900);
 @import 'login';
 @import 'newrant';
+@import 'rants';
 
 *,:after,:before{box-sizing:border-box}
 
@@ -27,6 +28,15 @@ body {
   main {
     @include span(6 of 8 last);
   }
+}
+
+body {
+  font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.72222;
+  color: #34495e;
+  background-color: #fff;
 }
 
 .app-inner-header {
