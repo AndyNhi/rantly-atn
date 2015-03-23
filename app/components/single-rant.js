@@ -12,11 +12,8 @@ export default Ember.Component.extend({
       this.sendAction('cancelRant', rant);
     },
 
-    saveRant: function() {
-
-      // GET INFO AND SEND TO UPPER CONTROLLER 
-
-      this.sendAction('saveRant', rant);
+    updateRant: function(rant) {
+      this.sendAction('updateRant', rant);
     }
 
   }
