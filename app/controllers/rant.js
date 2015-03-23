@@ -13,10 +13,17 @@ export default Ember.ObjectController.extend({
       this.set('isEditing', false);
     },
 
-    saveRant: function(){
-      console.log("THE RANT");
+    updateRant: function(rant){
+      var title = this.get('title');
+      var body = this.get('body');
+      this.store.find('rant', rant.id).then(function(){
+        rant.set('title', title)
+        rant.set('body', body)
+        rant.save().then(function () {
+          self.set('isEditing', false);
+        });
+      })
     }
-
   }
 
 
