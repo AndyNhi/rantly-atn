@@ -1,0 +1,53 @@
+{{yield}}
+
+<section class="rants-index">
+  <article class="rant-item">
+    <header class="rant-header">
+
+      <div class="rant-header-title">
+        {{#if rant.isEditing}}
+          {{input type="text" value=title}}
+        {{else}}
+          {{#link-to 'rant' rant}}{{title}}{{/link-to}}
+        {{/if}}
+      </div>
+
+      <div class="rant-header-actions">
+        {{#if rant.isEditing}}
+          <button {{action "saveRant" rant}} class="button button-primary">
+            <span class="icon-upload">Save</span>
+          </button>
+
+          <button {{action "cancelRant" rant}} class="button button-default">
+            <span class="icon-exit">Cancel</span>
+          </button>
+
+          <button class="button button-warning">
+            <span class="icon-trash"> Delete</span>
+          </button>
+        {{else}}
+          <button {{action "editRant" rant}} class="button button-primary edit"><span class="icon-new">Edit</span></button>
+        {{/if}}
+      </div>
+
+    </header>
+
+    <aside class="rant-secondary">
+      <div class="author">
+        <div style="background-image: url(http://www.gravatar.com/avatar/undefined?s=200)" class="author-photo">
+      </div>
+        String Counter << need to include
+      </div>
+    </aside>
+
+    <section class="rant-item-content">
+      {{#if rant.isEditing}}
+        {{input type="text" rows="13" value=body}}
+      {{else}}
+        {{body}}
+      {{/if}}
+    </section>
+
+    <button class="kill-button">Kill</button>
+
+</section>

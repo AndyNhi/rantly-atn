@@ -1,0 +1,31 @@
+{{#if isEdited}}
+  {{edit-component bindActionComponent="saveRant" title="editTitle" body="editBody"}}
+{{else}}
+<article class="rant-item">
+  <header class="rant-header">
+    <div class="rant-header-title">
+       {{this.title}}
+    </div>
+    <div class="rant-header-actions">
+      <button {{action 'editRant' thwis.id}} class="button button-primary edit"><span class="icon-new">Edit</span></button>
+    </div>
+  </header>
+
+  <aside class="rant-secondary">
+    <div class="author"><div style="background-image: url(http://www.gravatar.com/avatar/undefined?s=200)" class="author-photo"></div>
+    <h5> </h5>
+    <h6></h6>
+    </div>
+      This post is number of characters.
+  </aside>
+
+  <section class="rant-item-content">
+      {{this.body}}
+  </section>
+
+  <button class="kill-button">Kill</button>
+
+</article>
+{{/if}}
+
+{{outlet}}
