@@ -8,11 +8,6 @@ export default Ember.Controller.extend({
       var title = this.get('rantTitle');
       var body = this.get('rantBody');
 
-      // var user = Ember.Object.create({
-      //   user_id: 1
-      // })
-      // create user model object not just regular object
-
       console.log(title, "TITLE");
       console.log(body, "BODY");
       console.log(user, "USER");

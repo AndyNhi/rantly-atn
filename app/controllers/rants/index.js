@@ -1,5 +1,5 @@
 import Ember from 'ember';
 
-export default Ember.ObjectController.extend({
-   itemController: "rant"
+export default Ember.ArrayController.extend({
+    itemController: 'rant'
 });
