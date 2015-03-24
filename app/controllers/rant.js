@@ -16,13 +16,15 @@ export default Ember.ObjectController.extend({
     updateRant: function(rant){
       var title = this.get('title');
       var body = this.get('body');
+      var self = this;
       this.store.find('rant', rant.id).then(function(){
-        rant.set('title', title)
-        rant.set('body', body)
+        rant.set('title', title);
+        rant.set('body', body);
         rant.save().then(function () {
           self.set('isEditing', false);
         });
-      })
+        self.transitionToRoute('rants');
+      });
     }
   }
 
