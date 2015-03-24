@@ -27,6 +27,8 @@ body {
   }
   main {
     @include span(6 of 8 last);
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 }
 
@@ -53,6 +55,8 @@ body {
   color: #34495e;
   background-color: #fff;
 }
+
+
 
 .app-inner-header {
   float: left;
@@ -129,4 +133,8 @@ body {
 
 .login-form.signup {
   box-shadow: none;
+}
+
+.scroll {
+  overflow-y: scroll;
 }
