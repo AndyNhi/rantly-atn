@@ -1,0 +1,10 @@
+<section class="list-users">
+  {{#each user in model}}
+    <div class="user-card author">
+      <div style="background-image: url(http://www.gravatar.com/avatar/null?s=200)" class="author-photo"></div>
+        <h5>{{user.first_name}} {{user.last_name}}</h5>
+        <h6>{{user.email}}</h6>
+      </div>
+    </div>
+  {{/each}}
+</section>
