@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
+export default Ember.ObjectController.extend({
 
   actions: {
     saveRant: function() {
@@ -8,13 +8,22 @@ export default Ember.Controller.extend({
       var title = this.get('rantTitle');
       var body = this.get('rantBody');
       var user  = this.get('session.email');
+      var userid = this.get('session.user_id');
+      var self = this;
+      console.log(this.store.find('user', userid));
+      console.log(this.store.find('user'));
 
-      var rant = this.store.createRecord('rant', {user: user, body: body, title: title });
-      console.log(rant, "RANT");
-      this.set('rantTitle', '');
-      this.set('rantBody', '');
-      rant.save();
-      this.flashMessage('saved!', '', 1500);
+      this.store.find('user', userid).then(function(userobject) {
+        var rant = self.store.createRecord('rant', {user: userobject, body: body, title: title });
+        self.set('rantTitle', '');
+        self.set('rantBody', '');
+        rant.save().then(function (){
+          self.transitionToRoute('rants');
+        });
+      })
+    },
+
+    cancelRant: function() {
       this.transitionToRoute('rants');
     }
   }
