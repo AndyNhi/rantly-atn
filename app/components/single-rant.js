@@ -18,7 +18,12 @@ export default Ember.Component.extend({
 
     updateRant: function(rant) {
       this.sendAction('updateRant', rant);
+    },
+
+    deleteRant: function(rant) {
+      this.sendAction('deleteRant', rant);
     }
+
 
   }
 });

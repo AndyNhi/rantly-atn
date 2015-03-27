@@ -25,7 +25,12 @@ export default Ember.ObjectController.extend({
         });
         self.transitionToRoute('rants');
       });
+    },
+
+    deleteRant: function(rant){
+      rant.destroyRecord();
     }
+
   }
 
 
