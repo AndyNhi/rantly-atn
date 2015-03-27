@@ -21,7 +21,7 @@
           </button>
 
           <button class="button button-warning">
-            <span class="icon-trash"> Delete</span>
+            <span {{action "deleteRant" rant}} class="icon-trash"> Delete</span>
           </button>
         {{else}}
           <button {{action "editRant" rant}} class="button button-primary edit"><span class="icon-new">Edit</span></button>
@@ -51,6 +51,8 @@
       {{/if}}
     </section>
 
-    <button class="kill-button">Kill</button>
+    {{#if rant.isEditing}}
+      <button {{action "deleteRant" rant}} class="kill-button">Kill</button>
+    {{/if}}
 
 </section>
