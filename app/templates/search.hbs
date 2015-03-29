@@ -1,3 +1,21 @@
 {{#each rant in model}}
   {{single-rant title=rant.title body=rant.body rant=rant}}
 {{/each}}
+
+
+
+{{#if model}}
+  {{#each rant in model}}
+  {{single-rant title=rant.title body=rant.body rant=rant}}
+  {{/each}}
+{{else}}
+<section class="hero">
+  <header class="hero-header">
+    <h3>These aren't the droids you are looking for.</h3>
+    <h4></h4>
+  </header>
+  <div class="hero-content">
+    <p>Keep searching.</p>
+  </div>
+</section>
+{{/if}}
