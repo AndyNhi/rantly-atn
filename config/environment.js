@@ -8,6 +8,7 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
+    adapterURL: process.env.ADAPTER_URL,
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -19,6 +20,7 @@ module.exports = function(environment) {
           'default-src': "'none'",
           'script-src': "'self' 'unsafe-eval'",
           'font-src': "'self' fonts.gstatic.com",
+          'connect-src': "'self' " + process.env.ADAPTER_URL,
           'connect-src': "'self' *",
           'img-src': "'self' *",
           'style-src': "'self' 'unsafe-inline' fonts.googleapis.com",
