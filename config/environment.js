@@ -21,7 +21,6 @@ module.exports = function(environment) {
           'script-src': "'self' 'unsafe-eval'",
           'font-src': "'self' fonts.gstatic.com",
           'connect-src': "'self' " + process.env.ADAPTER_URL,
-          'connect-src': "'self' *",
           'img-src': "'self' *",
           'style-src': "'self' 'unsafe-inline' fonts.googleapis.com",
           'media-src': "'self'"
@@ -41,9 +40,10 @@ module.exports = function(environment) {
   };
 
   ENV['simple-auth-devise'] = {
-  crossOriginWhitelist: ['*'],
-  identificationAttributeName: 'email',
-  authenticationRoute: '/'
+    serverTokenEndpoint: process.env.ADAPTER_URL,
+    crossOriginWhitelist: ['*'],
+    identificationAttributeName: 'email',
+    authenticationRoute: '/'
   };
 
   if (environment === 'development') {
