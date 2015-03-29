@@ -17,7 +17,7 @@ export default Ember.ObjectController.extend({
         rant.save().then(function (){
           self.transitionToRoute('rants');
         });
-      })
+      });
     },
 
     cancelRant: function() {

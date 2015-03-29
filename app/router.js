@@ -13,6 +13,7 @@ Router.map(function() {
   this.resource("users", function() {
   });
   this.route("signup");
+  this.route("search", {path: '/search/:query'});
 });
 
 export default Router;
