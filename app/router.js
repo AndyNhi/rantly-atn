@@ -13,7 +13,6 @@ Router.map(function() {
   this.resource("users", function() {
   });
   this.route("signup");
-  this.route("protected");
 });
 
 export default Router;

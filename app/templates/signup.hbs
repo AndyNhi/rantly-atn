@@ -1,8 +1,11 @@
 <div class="login-form signup">
-  {{input placeholder="First Name" type="text" value=firstName}}
-  {{input placeholder="Last Name" type="text" value=lastName}}
-  {{input placeholder="Email" type="text" value=email}}
-  {{input placeholder="Password" type="text" value=password}}
+  {{data-validations placeholder='First Name' value=firstName type='text' errors=errors.firstName}}
+
+  {{data-validations placeholder='Last Name' value=lastName type='text' errors=errors.lastName}}
+
+  {{data-validations placeholder='Email' value=email type='text' errors=errors.email}}
+
+  {{data-validations placeholder='Password' value=password type='password' icon=true errors=errors.password}} `
 
   <button class="button button-primary button-lg button-block"{{action 'signUp'}}>Sign Up</button>
 
