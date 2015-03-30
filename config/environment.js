@@ -2,7 +2,6 @@
 
 module.exports = function(environment) {
 
-
   var ENV = {
     modulePrefix: 'rantly-atn',
     environment: environment,
