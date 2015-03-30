@@ -1,7 +1,3 @@
-article, header {
-  display: block;
-}
-
 .rant-item {
   width: 100%;
   position: relative;
@@ -29,7 +25,6 @@ article, header {
   font-size: 29px;
 }
 
-
 .rant-header-title a {
   color: #34495E;
 }
@@ -50,14 +45,12 @@ a {
   float: left;
 }
 
-
 .rant-item-content {
   float: left;
   width: 79%;
   padding-left: 20px;
   padding-right: 20px;
 }
-
 
 .author-photo {
   display: block;
