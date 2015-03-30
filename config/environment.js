@@ -40,7 +40,6 @@ module.exports = function(environment) {
   };
 
   ENV['simple-auth-devise'] = {
-    serverTokenEndpoint: process.env.ADAPTER_URL,
     crossOriginWhitelist: ['*'],
     identificationAttributeName: 'email',
     authenticationRoute: '/'
