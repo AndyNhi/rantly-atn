@@ -43,6 +43,6 @@ export default Ember.ArrayController.extend(EmberValidations.Mixin,{
           Ember.$('.rant-item');
         }, 300);
       }.bind(self));
-    },
+    }
   }
 });

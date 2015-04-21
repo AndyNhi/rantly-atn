@@ -22,6 +22,7 @@ export default Ember.ObjectController.extend({
 
     cancelRant: function() {
       this.transitionToRoute('rants');
+  
     }
   }
 
